@@ -4,5 +4,13 @@
     <string name="app_name">SmartPrevention</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login_button">LOGIN</string>
+    <string name="login_sign_up">SIGN UP</string>
+    <string name="register_sign_in">SIGN IN</string>
+    <string name="register_login_in"></string>
+    <string name="title_activity_register">RegisterActivity</string>
 
 </resources>

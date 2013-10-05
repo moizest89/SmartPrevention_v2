@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#61B09B"
+    tools:context=".LoginActivity" >
+	<ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/login_user_layout"
+        android:contentDescription="@string/app_name" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" 
+        android:background="#F5F4DC"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip">
+
+        <EditText
+            android:id="@+id/user_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="20dip"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="@string/user"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip" >
+	
+            <requestFocus />
+        </EditText>
+        <EditText
+            android:id="@+id/user_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="20dip"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip" >
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dip"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/button_sign_up"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:text="@string/login_sign_up" />
+
+            <Button
+                android:id="@+id/button_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    
+
+</RelativeLayout>
