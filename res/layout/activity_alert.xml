@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#61B09B"
+    android:orientation="vertical"
+    tools:context=".AlertActivity" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_weight="1">
+           
+                <ImageView
+                    android:id="@+id/IVAlert_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:src="@drawable/panic_1" >
+                </ImageView>
+                <LinearLayout 
+                    android:layout_width="0dp"
+                    android:layout_weight=".75"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="TextView" 
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dip"/>
+                    
+                </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/IVAlert_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:src="@drawable/panic_1" >
+                </ImageView>
+                <LinearLayout 
+                    android:layout_width="0dp"
+                    android:layout_weight=".75"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="TextView" 
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dip"/>
+                    
+                </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/IVAlert_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:src="@drawable/panic_1" >
+                </ImageView>
+                <LinearLayout 
+                    android:layout_width="0dp"
+                    android:layout_weight=".75"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:text="TextView" 
+                        android:textColor="#FFFFFF"
+                        android:textSize="25dip"/>
+                    
+                </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
