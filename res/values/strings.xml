@@ -14,4 +14,8 @@
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_alert">Alertas</string>
 
+    <!--  -->
+    <string name="alert_panic">Panico</string>
+    <string name="alert_sos">S.O.S</string>
+    <string name="alert_save">A Salvo</string>
 </resources>

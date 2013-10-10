@@ -11,15 +11,16 @@
         android:layout_height="fill_parent">
 
         <TableRow
-            android:id="@+id/tableRow1"
+            android:id="@+id/TRPanin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/simple_gradiant">
            
                 <ImageView
                     android:id="@+id/IVAlert_1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="fill_parent"
                     android:layout_weight=".25"
                     android:src="@drawable/panic_1" >
                 </ImageView>
@@ -31,26 +32,28 @@
                     <TextView
                         android:id="@+id/textView1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="TextView" 
+                        android:text="@string/alert_panic"
                         android:textColor="#FFFFFF"
-                        android:textSize="25dip"/>
+                        android:textSize="25dip" 
+                        android:paddingLeft="20dip"/>
                     
                 </LinearLayout>
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow2"
+            android:id="@+id/TRSos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/simple_gradiant">
                 <ImageView
                     android:id="@+id/IVAlert_1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="fill_parent"
                     android:layout_weight=".25"
-                    android:src="@drawable/panic_1" >
+                    android:src="@drawable/panic_2" >
                 </ImageView>
                 <LinearLayout 
                     android:layout_width="0dp"
@@ -60,26 +63,28 @@
                     <TextView
                         android:id="@+id/textView1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="TextView" 
+                        android:text="@string/alert_sos"
                         android:textColor="#FFFFFF"
-                        android:textSize="25dip"/>
+                        android:textSize="25dip" 
+                        android:paddingLeft="20dip"/>
                     
                 </LinearLayout>
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow3"
+            android:id="@+id/TRSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/simple_gradiant">
                 <ImageView
                     android:id="@+id/IVAlert_1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="fill_parent"
                     android:layout_weight=".25"
-                    android:src="@drawable/panic_1" >
+                    android:src="@drawable/panic_3" >
                 </ImageView>
                 <LinearLayout 
                     android:layout_width="0dp"
@@ -89,11 +94,12 @@
                     <TextView
                         android:id="@+id/textView1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="TextView" 
+                        android:text="@string/alert_save"
                         android:textColor="#FFFFFF"
-                        android:textSize="25dip"/>
+                        android:textSize="25dip" 
+                        android:paddingLeft="20dip"/>
                     
                 </LinearLayout>
         </TableRow>
