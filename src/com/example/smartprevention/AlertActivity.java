@@ -63,7 +63,7 @@ public class AlertActivity extends Activity {
 		
 		//SEND DATA
 		UserPing pingManager = new UserPing();
-		pingManager.ping(longitude, latitude, 1);
+		pingManager.ping(longitude, latitude, 1, getBaseContext());
 		
 		//EVENT => DISPLAY MAP
 	}
