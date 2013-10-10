@@ -4,6 +4,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ public class MapActivity extends Activity {
 
     private GoogleMap googleMap;
     static final LatLng ESA = new LatLng(-89.63, 13.87);
+    private MapManager mapZones = new MapManager();
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,6 @@ public class MapActivity extends Activity {
 		setContentView(R.layout.activity_map);
  
         try {
-            // Loading map
             initilizeMap();
  
         } catch (Exception e) {
@@ -33,15 +34,25 @@ public class MapActivity extends Activity {
         if (googleMap == null) {
             googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
  
-            // check if map is created successfully or not
             if (googleMap == null) {
-                Toast.makeText(getApplicationContext(),
-                        "No se pudo crear el mapa", Toast.LENGTH_SHORT)
-                        .show();
-            }else{
-            	//googleMap.setMyLocationEnabled(true);
-            	//googleMap.getUiSettings().setMyLocationButtonEnabled(true);
+                Toast.makeText(getApplicationContext(), "No se pudo crear el mapa", Toast.LENGTH_SHORT).show();
+            }
+            else{
             	googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ESA, 13));
+            	
+            	//Get safe zones
+            	mapZones.setCustomEventListener(new OnCustomEventListener(){
+					public void onEvent(){
+						for(int i = 0; i < mapZones.elements.size(); i++){
+							Bundle item = mapZones.elements.get(i);
+							
+							MarkerOptions marker = new MarkerOptions().position(new LatLng(item.getDouble("latitude"), item.getDouble("longitude"))).title(item.getString("name"));
+							googleMap.addMarker(marker);
+						}
+					}
+				});
+				
+            	mapZones.getSafeZones();
             }
         }
     }
