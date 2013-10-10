@@ -16,11 +16,14 @@ public class MapActivity extends Activity {
     private GoogleMap googleMap;
     static final LatLng ESA = new LatLng(-89.63, 13.87);
     private MapManager mapZones = new MapManager();
+    private PushNotification push;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_map);
+		
+		push = new PushNotification(this);
  
         try {
             initilizeMap();

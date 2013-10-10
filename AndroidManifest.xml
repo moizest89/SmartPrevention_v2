@@ -23,6 +23,10 @@
     <!-- Required to show current location -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
+    <!-- Extra features for Parse -->
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.VIBRATE" />
  
     <!-- Required OpenGL ES 2.0. for Maps V2 -->
     <uses-feature
@@ -75,6 +79,14 @@
 		<meta-data
 		     android:name="com.google.android.maps.v2.API_KEY"
 		     android:value="AIzaSyA64TlIwuKH2VLs6JhphFeNdSLjr03wMkg" />
+		
+		<service android:name="com.parse.PushService" />
+		<receiver android:name="com.parse.ParseBroadcastReceiver">
+		  <intent-filter>
+		    <action android:name="android.intent.action.BOOT_COMPLETED" />
+		    <action android:name="android.intent.action.USER_PRESENT" />
+		  </intent-filter>
+		</receiver>
     </application>
 
 </manifest>
