@@ -18,13 +18,33 @@ public class AlertActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_alert);
 
-		/*Button btn1 = (Button)findViewById(R.id.button1);
+		/*
+		Button btn1 = (Button)findViewById(R.id.button1);
+		Button btn2 = (Button)findViewById(R.id.button2);
+		Button btn3 = (Button)findViewById(R.id.button3);
+		
 		btn1.setOnClickListener(new View.OnClickListener() {			
 			@Override
 			public void onClick(View v) {
-				ping('ok');
+				ping('save');
 			}
-		});*/
+		});
+		
+		btn2.setOnClickListener(new View.OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				ping('sos');
+			}
+		});
+		
+		btn3.setOnClickListener(new View.OnClickListener() {			
+			@Override
+			public void onClick(View v) {
+				ping('panic');
+			}
+		});
+		
+		*/
 	}
 
 	@Override
@@ -40,6 +60,12 @@ public class AlertActivity extends Activity {
 
 		double longitude = location.getLongitude();
 		double latitude = location.getLatitude();		
+		
+		//SEND DATA
+		UserPing pingManager = new UserPing();
+		pingManager.ping(longitude, latitude, 1);
+		
+		//EVENT => DISPLAY MAP
 	}
 
 }
