@@ -1,18 +1,100 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="#61B09B"
-    tools:context=".MainActivity" 
-    >
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="326dp"
+        android:layout_gravity="top"
+        android:scaleType="centerCrop"
+        android:src="@drawable/maps" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/transparent_bar"
+        android:orientation="vertical" >
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F4DC"
+            android:padding="5dip"
+            android:text="Filtrar por"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:color="#000000" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dip"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/alert_critic_button"
+                android:layout_width="0dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight=".25"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/alert_1" />
+
+            <ImageButton
+                android:id="@+id/sos_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight=".25"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/alert_3" />
+
+            <ImageButton
+                android:id="@+id/save_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight=".25"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/alert_5" />
+
+            <ImageButton
+                android:id="@+id/unknow_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight=".25"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/alert_1_1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:background="#434D5B"
+            android:padding="2dip" />
+    </LinearLayout>
+
+</LinearLayout>
