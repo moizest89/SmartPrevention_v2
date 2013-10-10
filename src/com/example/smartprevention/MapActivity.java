@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MapActivity extends Activity {
 
     private GoogleMap googleMap;
-    static final LatLng ESA = new LatLng(-89.63., 13.87);
+    static final LatLng ESA = new LatLng(-89.63, 13.87);
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
